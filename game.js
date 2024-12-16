@@ -78,3 +78,25 @@ window.addEventListener('keydown', (e) => {
 window.addEventListener('keyup', (e) => {
     keys[e.key] = false;
 });
+
+// Draw the Background
+function drawBackground() {
+    ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+}
+
+// Draw Sonic
+function drawSonic() {
+    ctx.drawImage(sonic.sprite, sonic.x, sonic.y, sonic.width, sonic.height);
+}
+
+// Main Game Loop
+function gameLoop() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);  // Clear the screen
+    drawBackground();
+    update();
+    drawSonic();
+    requestAnimationFrame(gameLoop);  // Loop the game at 60fps
+}
+
+// Start the game
+gameLoop();
