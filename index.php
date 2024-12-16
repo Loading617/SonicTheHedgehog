@@ -12,9 +12,10 @@
         <?php echo"<h2>Keyboard Controls</h2>"; ?>
         <ul>
             <li>Movement: Left and Right Arrow Keys</li>
-            <li>Speed Up: Hold down Left or Right Arrow Keys</li>
+            <li>Spin Jump: ASD</li>
+            <li>Spin Attack: Left Arrow & Right Arrow + Down Arrow</li>
             <li>Look Up and Down and Crouch: Up and Down Arrow Keys</li>
-            <li>Start: Enter</li>
+            <li>Start and Pause: Enter</li>
             <li>Jump: Spacebar</li>
         </ul>
         </div>
