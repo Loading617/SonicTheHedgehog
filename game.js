@@ -23,3 +23,58 @@ sonic.sprite.src = 'assets/sonic.png';  // Use a placeholder image for now
 // Background (for demonstration)
 let background = new Image();
 background.src = 'assets/background.png';  // Load a background image
+
+// Move Sonic
+function moveSonic() {
+    sonic.x += sonic.dx;
+    sonic.y += sonic.dy;
+    
+    // Gravity (pull Sonic down)
+    if (sonic.y < canvas.height - sonic.height) {
+        sonic.dy += sonic.gravity;
+        sonic.isFalling = true;
+    } else {
+        sonic.dy = 0;
+        sonic.y = canvas.height - sonic.height;
+        sonic.isFalling = false;
+        sonic.isJumping = false;
+    }
+
+    // Move Sonic left or right based on velocity
+    if (sonic.x < 0) sonic.x = 0;
+    if (sonic.x > canvas.width - sonic.width) sonic.x = canvas.width - sonic.width;
+}
+
+// Handle Jumping
+function jump() {
+    if (!sonic.isJumping && !sonic.isFalling) {
+        sonic.dy = sonic.jumpPower;
+        sonic.isJumping = true;
+    }
+}
+
+// Update Sonic's velocity based on keypresses
+function update() {
+    if (keys['ArrowRight']) {
+        sonic.dx = sonic.speed;
+    } else if (keys['ArrowLeft']) {
+        sonic.dx = -sonic.speed;
+    } else {
+        sonic.dx = 0;
+    }
+
+    if (keys['Space'] || keys['ArrowUp']) {
+        jump();
+    }
+
+    moveSonic();
+}
+
+// Key Controls
+let keys = {};
+window.addEventListener('keydown', (e) => {
+    keys[e.key] = true;
+});
+window.addEventListener('keyup', (e) => {
+    keys[e.key] = false;
+});
