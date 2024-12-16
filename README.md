@@ -1,5 +1,5 @@
 <p align="center">
-        <img src=".png" width="325" height="478" alt="Sonic The Hedgehog">
+        <img src="sonicthehedgehoggamecover.jpg" width="325" height="478" alt="Sonic The Hedgehog">
 </p>
 
 # Sonic The Hedgehog
