@@ -1,35 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-       	<meta charset="UTF-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="icon" type="image/x-icon" href="sonicthehedgehog.ico">
-        <title>Sonic The Hedgehog</title>
-    </head>
-    <body>
-    <div id="controls">
-        <div id="keyboard">
-        <?php echo"<h2>Keyboard Controls</h2>"; ?>
-        <ul>
-            <li>Movement: Left and Right Arrow Keys</li>
-            <li>Spin Jump: ASD</li>
-            <li>Spin Attack: Left Arrow & Right Arrow + Down Arrow</li>
-            <li>Look Up and Down and Crouch: Up and Down Arrow Keys</li>
-            <li>Start and Pause: Enter</li>
-            <li>Jump: Spacebar</li>
-        </ul>
-        </div>
-        <div id="controller">
-        <?php echo"<h2>Scroll/PgDown to hide, PgUp to show again.</h2>"; ?>
-        </div>
-        </div>
-        <div id="container">
-            <canvas class="emuscripten" id="canvas"></canvas>
-        </div>
-    <script type="text/javascript">
-        </script>
-        <script async type="text/javascript" src="sth.us.f3dex2e.js"></script>
-        <script>
-        </script>
-    </body>
+<head <?php echo""; ?>>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonic the Hedgehog - Web Port</title>
+    <link rel="icon" type="image/x-icon" href="sonicthehedgehog.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body <?php echo""; ?>>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <script src="game.js"></script>
+</body>
 </html>
