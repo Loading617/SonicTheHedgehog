@@ -103,3 +103,16 @@ gameLoop();
 
 let jumpSound = new Audio('assets/jump.mp3');
 jumpSound.play();
+
+// Example platform (positioned at x=200, y=300)
+let platform = { x: 200, y: 300, width: 100, height: 20 };
+
+// Check for collision with a platform
+function checkCollision() {
+    if (sonic.x + sonic.width > platform.x && sonic.x < platform.x + platform.width &&
+        sonic.y + sonic.height > platform.y && sonic.y < platform.y + platform.height) {
+        // Sonic is touching the platform
+        sonic.dy = 0;
+        sonic.y = platform.y - sonic.height;  // Place Sonic on top of the platform
+    }
+}
