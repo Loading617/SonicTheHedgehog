@@ -13,7 +13,7 @@
         <ul>
             <li>Movement: Left and Right Arrow Keys</li>
             <li>Speed Up: Hold down Left or Right Arrow Keys</li>
-            <li>Look Up and Down: Up and Down Arrow Keys</li>
+            <li>Look Up and Down and Crouch: Up and Down Arrow Keys</li>
             <li>Start: Enter</li>
             <li>Jump: Spacebar</li>
         </ul>
