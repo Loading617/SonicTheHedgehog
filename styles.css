@@ -3,9 +3,9 @@ body, html{
     padding: 0;
     width: 100vw;
     min-height: 100vh;
-    background-color: #111;
+    background-color: #FF0000;
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: blue;
     image-rendering: pixelated;
     scrollbar-width: none;
   }
