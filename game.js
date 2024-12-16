@@ -100,3 +100,6 @@ function gameLoop() {
 
 // Start the game
 gameLoop();
+
+let jumpSound = new Audio('assets/jump.mp3');
+jumpSound.play();
